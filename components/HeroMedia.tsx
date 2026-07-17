@@ -7,6 +7,7 @@ type HeroMediaProps = {
 };
 
 const heroImageSrc = "/images/hero/phil-headshot.JPG";
+const defaultCaption = "Mechanical Design | Robotics | Product Development";
 
 function AbstractHeroPlaceholder() {
   return (
@@ -27,9 +28,10 @@ function AbstractHeroPlaceholder() {
 }
 
 export function HeroMedia({
-  caption = "Mechanical Design | Robotics | Product Development",
+  caption = defaultCaption,
 }: HeroMediaProps) {
   const [showHeroImage, setShowHeroImage] = useState(true);
+  const useDefaultCaption = caption === defaultCaption;
 
   return (
     <figure className="media-shell group relative overflow-hidden rounded-[2rem] border border-white/70 bg-ink shadow-soft">
@@ -46,8 +48,17 @@ export function HeroMedia({
         )}
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink/55 via-ink/18 to-transparent" />
         <div className="absolute inset-x-5 bottom-5 flex flex-col items-start gap-3 rounded-3xl border border-white/45 bg-white/22 p-4 text-white shadow-sm backdrop-blur-xl sm:flex-row sm:items-center sm:justify-between">
-          <figcaption className="block w-full min-w-0 max-w-full whitespace-normal text-wrap break-normal text-sm font-semibold leading-snug sm:w-auto sm:flex-1 sm:whitespace-nowrap">
-            {caption}
+          <figcaption className="block w-full min-w-0 max-w-full whitespace-normal text-sm font-semibold leading-snug sm:w-auto sm:flex-1">
+            {useDefaultCaption ? (
+              <span>
+                Mechanical Design | Robotics
+                <br className="sm:hidden" />
+                <span className="sm:hidden">Product Development</span>
+                <span className="hidden sm:inline"> | Product Development</span>
+              </span>
+            ) : (
+              caption
+            )}
           </figcaption>
           <span className="rounded-full border border-white/35 bg-white/20 px-3 py-1 text-xs">
             Phil Boctor
