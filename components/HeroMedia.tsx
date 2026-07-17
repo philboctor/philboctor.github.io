@@ -46,7 +46,9 @@ export function HeroMedia({
         )}
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink/55 via-ink/18 to-transparent" />
         <div className="absolute inset-x-5 bottom-5 flex flex-col gap-3 rounded-3xl border border-white/45 bg-white/22 p-4 text-white shadow-sm backdrop-blur-xl sm:flex-row sm:items-center sm:justify-between">
-          <figcaption className="text-sm font-semibold">{caption}</figcaption>
+          <figcaption className="min-w-0 max-w-full whitespace-normal break-words text-sm font-semibold leading-snug">
+            {caption}
+          </figcaption>
           <span className="rounded-full border border-white/35 bg-white/20 px-3 py-1 text-xs">
             Phil Boctor
           </span>

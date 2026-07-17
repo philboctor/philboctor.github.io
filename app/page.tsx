@@ -98,48 +98,6 @@ export default function HomePage() {
         </Reveal>
       </Section>
 
-      <Section eyebrow="How I work" title="Start with the constraint that matters">
-        <div className="relative">
-          <div className="absolute left-8 top-12 hidden h-px w-[calc(100%-4rem)] bg-gradient-to-r from-accent/0 via-accent/35 to-accent/0 md:block" />
-          <div className="grid gap-5 md:grid-cols-4">
-            {[
-              {
-                title: "Define constraints",
-                body: "Start with packaging, loads, assembly, manufacturability, and the test that will matter.",
-              },
-              {
-                title: "Build the simplest prototype",
-                body: "Make the next unknown physical quickly enough that the hardware can answer back.",
-              },
-              {
-                title: "Test honestly",
-                body: "Separate what worked once from what cycles, aligns, seals, or survives reliably.",
-              },
-              {
-                title: "Iterate from failure",
-                body: "Use binding, rupture, friction, and messy behavior to isolate the next design change.",
-              },
-            ].map((item, index) => (
-              <Reveal delay={index * 100} key={item.title}>
-                <div className="relative h-full rounded-[1.5rem] border border-white/70 bg-white/80 p-6 shadow-card backdrop-blur transition duration-300 hover:-translate-y-1 hover:shadow-cardHover">
-                  <div className="mb-8 flex h-12 w-12 items-center justify-center rounded-full border border-accent/20 bg-mist text-sm font-semibold text-accent">
-                    0{index + 1}
-                  </div>
-                  <h3 className="text-lg font-semibold text-ink">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-muted">{item.body}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-        <Reveal>
-          <p className="mt-9 max-w-3xl text-xl leading-8 text-ink">
-            Good prototypes do not need to be perfect. They need to reveal the
-            next design decision.
-          </p>
-        </Reveal>
-      </Section>
-
       <Section eyebrow="Skills" title="Mechanical and product design toolkit">
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {skills.map((skill) => (
@@ -155,17 +113,15 @@ export default function HomePage() {
       <Section eyebrow="Engineering philosophy" title="The prototype starts arguing back">
         <Reveal>
           <div className="max-w-3xl rounded-[1.75rem] border border-white/70 bg-white/70 p-8 shadow-card backdrop-blur">
-          <p className="text-base leading-7 text-muted">
-            CAD is where a design becomes organized, but testing is where the
-            design becomes honest. A good prototype does not need to be perfect.
-            It needs to reveal the next decision.
-          </p>
-          <Link
-            className="focus-ring link-arrow mt-6 inline-flex text-sm font-semibold text-accent hover:text-ink"
-            href="/resume"
-          >
-            See experience and resume
-          </Link>
+            <p className="text-base leading-7 text-muted">
+              I learn fastest by building. I start in CAD, make a prototype, test it, and revise whatever does not work. I also try to think about manufacturing and assembly early, so the final design works off the screen too.
+            </p>
+            <Link
+              className="focus-ring link-arrow mt-6 inline-flex text-sm font-semibold text-accent hover:text-ink"
+              href="/resume"
+            >
+              See experience and resume
+            </Link>
           </div>
         </Reveal>
       </Section>
