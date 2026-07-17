@@ -32,7 +32,7 @@ export default function ContactPage() {
           href="https://github.com/philboctor"
         >
           <p className="text-sm font-medium text-accent">GitHub</p>
-          <p className="mt-2 font-semibold text-ink">philboctor554</p>
+          <p className="mt-2 font-semibold text-ink">philboctor</p>
         </a>
         <Link
           className="focus-ring rounded-lg border border-line bg-white p-6 transition hover:border-accent"
