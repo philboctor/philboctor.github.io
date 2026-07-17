@@ -1,0 +1,11 @@
+.next
+out
+node_modules
+node_modules.partial
+.pnpm-store/
+.env*.local
+Website Media/
+public/media-review/
+.media-review/
+*.heic
+*.HEIC
